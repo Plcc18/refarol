@@ -5,7 +5,7 @@ import { subscribeToEvent } from '../functions/subscribe-to-event'
 
 export const acessInviteLinkRoute: FastifyPluginAsyncZod = async app => {
   app.get(
-    '/invites/subscriberID',
+    '/invites/:subscriberID',
     {
       schema: {
         summary: 'Acess invite links and redirects user',
