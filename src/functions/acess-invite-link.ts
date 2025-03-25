@@ -1,9 +1,9 @@
 import { redis } from '../redis/client'
 
-interface acessInviteLinkParams {
+interface AcessInviteLinkParams {
   subscriberID: string
 }
 
-export async function acessInviteLink({ subscriberID }: acessInviteLinkParams) {
+export async function acessInviteLink({ subscriberID }: AcessInviteLinkParams) {
   await redis.hincrby('referral:acess-count', subscriberID, 1)
 }
